@@ -1,0 +1,191 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body - Infinite Space with Nebula-Inspired Background */
+body {
+    background: url('https://example.com/space-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #F1F1F1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Container - Floating UI Element with Cosmic Glow */
+#container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #00C6FF;
+    box-shadow: 0px 0px 30px rgba(0, 198, 255, 0.8);
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to elevate the container */
+#container:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 50px rgba(0, 198, 255, 0.9);
+}
+
+/* Heading - Glowing Astronaut Theme Text */
+h1 {
+    font-size: 32px;
+    color: #00C6FF;
+    text-shadow: 0px 0px 20px #00C6FF, 0px 0px 40px #00C6FF;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: glowingText 1.5s infinite alternate;
+}
+
+/* Glowing Text Animation */
+@keyframes glowingText {
+    0% {
+        text-shadow: 0px 0px 20px #00C6FF, 0px 0px 40px #00C6FF;
+    }
+    50% {
+        text-shadow: 0px 0px 30px #FF4E50, 0px 0px 60px #FF4E50;
+    }
+    100% {
+        text-shadow: 0px 0px 20px #00C6FF, 0px 0px 40px #00C6FF;
+    }
+}
+
+/* Sentence Display - Cosmic Glow with Space Aura */
+#sentence {
+    font-size: 22px;
+    color: #F1FF00;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #F1FF00;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px rgba(241, 255, 0, 0.8);
+    transition: transform 0.2s ease;
+}
+
+/* Focus effect on sentence */
+#sentence:focus {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 30px rgba(241, 255, 0, 1);
+}
+
+/* Text Input - Neon Border and Space Effect */
+#input {
+    width: 100%;
+    height: 70px;
+    padding: 15px;
+    border: 2px solid #00C6FF;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    background: #1a1a1a;
+    color: #F1F1F1;
+    resize: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus - Smooth Glowing Border */
+#input:focus {
+    border-color: #FF4E50;
+    box-shadow: 0 0 15px rgba(255, 78, 80, 0.8);
+    background: #222222;
+}
+
+/* Status Text - Alert with Glowing Red */
+#status {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF4E50;
+    margin-bottom: 8px;
+    animation: alertGlow 1s infinite alternate;
+}
+
+/* Animation for status glow */
+@keyframes alertGlow {
+    0% {
+        text-shadow: 0px 0px 10px #FF4E50, 0px 0px 20px #FF4E50;
+    }
+    50% {
+        text-shadow: 0px 0px 15px #FF4E50, 0px 0px 30px #FF4E50;
+    }
+    100% {
+        text-shadow: 0px 0px 10px #FF4E50, 0px 0px 20px #FF4E50;
+    }
+}
+
+/* WPM Display - Cool Cyan for Clear Readability */
+#WPM {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00D9D9;
+    margin-top: 10px;
+}
+
+/* Restart Button - Cosmic Glowing Button */
+#button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(145deg, #00C6FF, #009E99);
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on button */
+#button:hover {
+    background: linear-gradient(145deg, #00B0FF, #0099A5);
+    box-shadow: 0px 0px 25px rgba(0, 198, 255, 0.8);
+    transform: translateY(-5px);
+}
+
+/* Button Active - Slight Push Down Effect */
+#button:active {
+    transform: translateY(2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    #sentence {
+        font-size: 18px;
+    }
+
+    #input {
+        height: 60px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #button {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
